@@ -1,0 +1,34 @@
+import React, { Component } from 'react';
+//aqui também pode ser import React from 'react'
+import App from './app';
+
+
+export default class TableProfissionais extends Component {
+    //também pode ser export default class TabelProfissionais extends React.Component {}
+    
+    render() {
+        //console.log("PROPS:", this.props);
+        return ( //aqui usa parênteses para inserir HTML (padrão para não dar problema em casos específicos, mas poderia ser sem 
+        <div>    
+            <h2>Eu sou uma tabela</h2>
+        
+
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>GitHub</th>
+            </tr>
+            <tr>
+                <td>{this.props.profissionais[0].nome}</td>
+            
+                <td>{this.props.profissionais[0].github}</td>
+            </tr>
+        </table>
+        </div>
+            
+        
+        )
+    }
+}
+
+; //exporta para poder usar em outros lugares do sistema
