@@ -33,7 +33,7 @@ export default class App extends Component { //outra forma de exportar  a classe
         <div>    
             <h1>Hello World!</h1>
             <TableProfissionais dados={this.state.profissionais}/>
-            <Form />
+            <Form  onClick={this.lidarComClick}/>
             
             
         </div>

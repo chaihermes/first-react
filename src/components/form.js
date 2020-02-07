@@ -1,6 +1,19 @@
 import React from 'react'
 
 export default class Form extends React.Component {
+
+    constructor(props){
+        super(props)
+
+        this.state = {
+            coisa:
+        }
+    } 
+
+    lidarComClick(e){
+        this.props.onFormClick(this.state.coisa);
+    }
+
     render() {
         return (
             <form className="card">
@@ -15,11 +28,11 @@ export default class Form extends React.Component {
                     <label className="form-label">GitHub</label><br />
                     <input className="form-control" type="url" />
                 </p>
-                <p className="form-group">
-                    <button className="btn btn-primary">Enviar</button>
+                <p className="card-footer text-right">
+                    <button className="btn btn-primary" onClick={this.lidarComClick}>Enviar</button>
                 </p>
 
-            </form>
+            </form> 
         )
     }
 }
