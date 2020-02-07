@@ -11,10 +11,12 @@ export default class App extends Component { //outra forma de exportar  a classe
         this.state = {
             profissionais: [
                 {
+                id: 1,
                 nome: "Wagner Venceslau",
                 github: "http://github.io/wagven"
                 },
                 {
+                id: 2,
                 nome: "Eduardo Rocha",
                 github: "http://github.io/eduroc"
                 }
@@ -24,13 +26,13 @@ export default class App extends Component { //outra forma de exportar  a classe
 
    
     render() {
-        //console.log("STATE:", this.state)
+        //console.log("STATE:", this.state);
         return ( 
             //aqui usa parênteses para inserir HTML (padrão para não dar problema em casos específicos, mas poderia ser sem 
         
         <div>    
             <h1>Hello World!</h1>
-            <TableProfissionais profissionais={this.state.profissionais}/>
+            <TableProfissionais dados={this.state.profissionais}/>
             <Form />
             
             
